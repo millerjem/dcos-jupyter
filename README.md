@@ -30,7 +30,7 @@ python mnist.py
 git clone https://github.com/yahoo/TensorFlowOnSpark.git
 curl -fsSL -O https://s3.amazonaws.com/vishnu-mohan/tensorflow/mnist/mnist.zip
 unzip mnist.zip
-eval spark-submit ${SPARK_OPTS} --verbose $(pwd)/TensorFlowOnSpark/examples/mnist/mnist_data_setup.py --output minst/csv --format csv
+eval spark-submit ${SPARK_OPTS} --verbose $(pwd)/TensorFlowOnSpark/examples/mnist/mnist_data_setup.py --output mnist/csv --format csv
 hdfs dfs -ls mnist/
 eval spark-submit ${SPARK_OPTS} --verbose \
   --conf spark.mesos.executor.docker.image=dcoslabs/dcos-jupyterlab:1.2.0-0.33.7 \
